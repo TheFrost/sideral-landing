@@ -1,0 +1,29 @@
+{
+  "name": "sideral-landing",
+  "version": "1.0.0",
+  "description": "Front-end Landing page SIDERAL",
+  "main": "index.js",
+  "repository": "https://github.com/TheFrost/sideral-landing.git",
+  "author": "TheFrost <frost084@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "dev": "rm -rf dist && node server.js",
+    "build": "rm -rf public && parcel build src/*.pug --out-dir public --no-cache && node postbuild.js"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.8.0",
+    "@babel/plugin-proposal-class-properties": "^7.8.0",
+    "@babel/preset-env": "^7.8.2",
+    "babel-eslint": "^10.0.3",
+    "express": "^4.17.1",
+    "lodash.escaperegexp": "^4.1.2",
+    "parcel-bundler": "^1.12.4",
+    "pug": "^2.0.4",
+    "replace-in-file": "^5.0.2",
+    "sass": "^1.24.4",
+    "standard": "^14.3.1"
+  },
+  "standard": {
+    "parser": "babel-eslint"
+  }
+}
