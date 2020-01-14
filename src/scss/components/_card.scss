@@ -1,4 +1,5 @@
 .card {
+  display: block;
   max-width: 1024px;
   width: 100%;
 
@@ -8,8 +9,8 @@
     align-items: center;
     flex-direction: column;
 
-    @media (min-width: 600px) {
-      flex-direction: row;
-    }
+    overflow: hidden;
+
+    @media (min-width: 600px) { flex-direction: row; }
   }
 }
