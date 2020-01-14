@@ -6,10 +6,14 @@ const isMobileDevice = () => new RegExp(/Mobi/i).test(window.navigator.userAgent
 // logic
 const triggerEntry = () => {
   new TimelineMax()
+    .to('.header__inner', 1, {
+      y: 0,
+      ease: Expo.easeOut
+    })
     .staggerTo('.card__row-inner', 1, {
       y: 0,
       ease: Expo.easeOut
-    }, 0.1)
+    }, 0.1, '-=0.75')
 }
 
 const windowLoadHandler = () => {
@@ -29,7 +33,7 @@ const mouseMoveHandler = ({ clientX, clientY }) => {
   const factor = 5
 
   TweenMax
-    .to('.card', 1, {
+    .to('.transform3d', 1, {
       rotateY: x * factor,
       rotateX: -y * factor
     })
@@ -37,6 +41,7 @@ const mouseMoveHandler = ({ clientX, clientY }) => {
 
 const setupInitState = () => {
   TweenMax.set('.card__row-inner', { y: '100%' })
+  TweenMax.set('.header__inner', { y: '100%' })
 }
 
 // bind events

@@ -4,7 +4,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 1rem;
+  padding: 0 2rem 86px; // compensate header size to center card
 
   perspective: 1000px;
 }
