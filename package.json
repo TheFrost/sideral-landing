@@ -25,5 +25,8 @@
   },
   "standard": {
     "parser": "babel-eslint"
+  },
+  "dependencies": {
+    "gsap": "^3.0.5"
   }
 }
