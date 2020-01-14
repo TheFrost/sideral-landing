@@ -2,6 +2,7 @@
   position: absolute;
   top: 0;
   left: 0;
+  z-index: 100;
 
   display: flex;
   justify-content: center;
@@ -11,20 +12,12 @@
 
   background-color: #fff;
 
-  &__spin {
-    width: 70px;
-    height: 70px;
+  &__shape {
+    width: 100%;
+    height: 3px;
 
-    border: 3px solid black;
-    border-left-color: transparent;
-    border-right-color: transparent;
-    border-radius: 50%;
-
-    animation: spin 1s linear infinite;
+    background-color: black;
+    transform: scaleX(0);
+    transform-origin: left center;
   }
-}
-
-@keyframes spin {
-  from { transform: rotate3d(0, 0, 1, 0deg); }
-  to { transform: rotate3d(0, 0, 1, 360deg); }
 }

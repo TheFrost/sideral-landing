@@ -18,8 +18,12 @@ const triggerEntry = () => {
 
 const windowLoadHandler = () => {
   window.setTimeout(() => {
-    TweenMax
-      .to('.loader', 0.5, {
+    new TimelineMax()
+      .to('.loader__shape', 2, {
+        scaleX: 1,
+        ease: Expo.easeInOut
+      })
+      .to('.loader', 0.33, {
         autoAlpha: 0,
         ease: Expo.easeOut
       })
